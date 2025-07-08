@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangular Arbitrage Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            width: 45%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        input[type="submit"] {
+            padding: 6px 14px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <h3>Pair 1: Base1 → Quote1</h3>
+            <input type="text" name="pair1_base" placeholder="Base1 (e.g. 1)">
+            <input type="text" name="pair1_quote" placeholder="Quote1 (e.g. 0.000026)">
+
+            <h3>Pair 2: Quote1 → Quote2</h3>
+            <input type="text" name="pair2_base" placeholder="Quote1">
+            <input type="text" name="pair2_quote" placeholder="Quote2">
+
+            <h3>Pair 3: Quote2 → Base1</h3>
+            <input type="text" name="pair3_base" placeholder="Quote2">
+            <input type="text" name="pair3_quote" placeholder="Base1">
+
+            <h3>Fee (%)</h3>
+            <input type="text" name="fee" placeholder="example = 0.2">
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if profit is not none %}
+            <h3>Profit: {{ profit }} %</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

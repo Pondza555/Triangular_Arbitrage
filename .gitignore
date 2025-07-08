@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VSCode settings
+.vscode/
+
+# Environment variables / Secrets
+.env
+
+# macOS system files
+.DS_Store
+
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.pip-wheel-metadata/
+
+# Log files
+*.log
+
+# Flask instance folder (if you use it)
+instance/
+
+# Gunicorn socket files (optional)
+*.pid
+*.sock
+
+# Pytest / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Render build cache (if used locally)
+render.yaml~
